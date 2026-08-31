@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVAS ELEY | Cosmetología & Estética Integral - Los Ángeles, Chile</title>
+    
+    <!-- Local SEO & OpenGraph Meta Tags -->
+    <meta name="description" content="Sitio oficial y plataforma digital de reservas de DIVAS ELEY en Los Ángeles, Chile. Cosmetología, estética corporal, masajes, uñas, cejas y pestañas con atención personalizada por nuestras profesionales.">
+    <meta name="keywords" content="Salón de belleza Los Ángeles Chile, Centro de estética Los Ángeles, Cosmetología Los Ángeles, Estética integral Los Ángeles, Masajes Los Ángeles Chile, Masajes reductivos Los Ángeles, Limpieza facial Los Ángeles, Uñas Los Ángeles, Pestañas Los Ángeles, Cejas Los Ángeles, Depilación Los Ángeles, Tratamientos faciales Los Ángeles, Estética corporal Los Ángeles">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FAF6ED',
+                            100: '#F5EBD7',
+                            200: '#EAD5B0',
+                            300: '#DFBE88',
+                            400: '#D4AF37', // Metallic Luxury Gold
+                            500: '#B88E28',
+                            600: '#946F1B',
+                            700: '#705112',
+                            800: '#4D360B',
+                            900: '#2A1C04',
+                        },
+                        cream: {
+                            50: '#FCFBF9',
+                            100: '#FAF8F5',
+                            200: '#F4EFE6',
+                            300: '#E9DFC8',
+                        },
+                        blush: {
+                            50: '#FFF5F7',
+                            100: '#FEE6EA',
+                            200: '#FCD2D9',
+                        },
+                        noir: '#0F0F10',
+                        charcoal: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Cinzel', 'serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 10px 30px -5px rgba(212, 175, 55, 0.25)',
+                        'kawaii-glow': '0 10px 25px -5px rgba(252, 210, 217, 0.4)',
+                        'card-hover': '0 20px 40px -15px rgba(15, 15, 16, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Luxury Styling & Micro-Animations -->
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #DFBE88 0%, #D4AF37 50%, #946F1B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #D4AF37 0%, #B88E28 50%, #946F1B 100%);
+        }
+        .gold-gradient-bg:hover {
+            background: linear-gradient(135deg, #EAD5B0 0%, #D4AF37 50%, #B88E28 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B88E28;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes subtlePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.02); }
+        }
+        .sparkle-pulse {
+            animation: subtlePulse 3s infinite ease-in-out;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-cream-100 text-charcoal font-sans antialiased selection:bg-gold-200 selection:text-noir pb-24 lg:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-noir text-white text-xs py-2.5 px-4 text-center border-b border-gold-400/30 font-light flex items-center justify-center space-x-2">
+        <span class="inline-flex items-center bg-gold-400 text-noir font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full tracking-widest">
+            ✨ Reserva Online
+        </span>
+        <span><strong>Atención personalizada en Los Ángeles</strong> — Selecciona a tu profesional preferida y confirma en WhatsApp</span>
+        <button onclick="openBookingModal()" class="underline text-gold-300 hover:text-white transition ml-2 hidden sm:inline focus:outline-none font-medium">Agendar Cita</button>
+    </div>
+
+    <!-- Header Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-lg border-b border-gold-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 md:h-24">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group py-1">
+                    <div class="relative h-14 md:h-20 flex items-center justify-center transition group-hover:scale-105">
+                        <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/DIVAS%20logo.png" alt="DIVAS ELEY Logo" class="h-14 md:h-18 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/200x80/0F0F10/D4AF37?text=DIVAS+ELEY';">
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-6 text-xs font-semibold uppercase tracking-wider text-gray-700">
+                    <a href="#inicio" class="hover:text-gold-600 transition">Inicio</a>
+                    <a href="#conocenos" class="hover:text-gold-600 transition">Nosotras</a>
+                    <a href="#catalogo" class="hover:text-gold-600 transition">Catálogo & Precios</a>
+                    <a href="#estetica-corporal" class="hover:text-gold-600 transition">Estética Corporal</a>
+                    <a href="#giftcards" class="hover:text-gold-600 transition">Gift Cards</a>
+                    <a href="#convenios" class="hover:text-gold-600 transition">Convenios</a>
+                    <a href="#trabaja-con-nosotras" class="hover:text-gold-600 transition">Trabaja con Nosotras</a>
+                    <a href="#testimonios" class="hover:text-gold-600 transition">Opiniones</a>
+                    <a href="#faq" class="hover:text-gold-600 transition">FAQ</a>
+                </nav>
+
+                <!-- Desktop Action Buttons (Cart + Quick Booking) -->
+                <div class="hidden xl:flex items-center space-x-4">
+                    <button onclick="openCartDrawer()" class="relative bg-cream-100 hover:bg-gold-50 border border-gold-300 text-noir px-4 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition flex items-center space-x-2 shadow-sm">
+                        <i class="fa-solid fa-cart-shopping text-gold-600 text-sm"></i>
+                        <span>Mi Carrito</span>
+                        <span id="cart-badge-header" class="bg-gold-500 text-white font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center ml-1">0</span>
+                    </button>
+
+                    <button onclick="openBookingModal()" class="gold-gradient-bg text-white px-6 py-3 rounded-full text-xs font-bold tracking-widest uppercase shadow-md hover:shadow-gold-glow transition-all flex items-center space-x-2">
+                        <i class="fa-regular fa-calendar-check text-sm"></i>
+                        <span>Reservar Cita</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Header Right Actions (Cart + Menu Toggle) -->
+                <div class="flex xl:hidden items-center space-x-3">
+                    <button onclick="openCartDrawer()" class="relative bg-gold-50 border border-gold-300 p-2.5 rounded-full text-noir flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-cart-shopping text-gold-600 text-base"></i>
+                        <span id="cart-badge-mobile-header" class="absolute -top-1 -right-1 bg-noir text-gold-400 font-bold text-[10px] w-5 h-5 rounded-full border border-gold-400 flex items-center justify-center">0</span>
+                    </button>
+
+                    <button id="mobile-menu-btn" class="text-noir p-2 focus:outline-none" aria-label="Menú principal">
+                        <i class="fa-solid fa-bars text-2xl text-gold-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-gold-200 px-6 pt-2 pb-6 space-y-3">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Inicio</a>
+            <a href="#conocenos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Conoce DIVAS ELEY</a>
+            <a href="#catalogo" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Catálogo de Servicios & Precios</a>
+            <a href="#estetica-corporal" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Estética Corporal & Bienestar</a>
+            <a href="#giftcards" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Gift Cards</a>
+            <a href="#convenios" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Convenios Empresariales</a>
+            <a href="#trabaja-con-nosotras" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Trabaja con Nosotras</a>
+            <a href="#testimonios" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Opiniones / Testimonios</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium hover:text-gold-600 border-b border-gray-100">Preguntas Frecuentes</a>
+            <div class="pt-3 flex flex-col gap-2">
+                <button onclick="openCartDrawer(); toggleMobileMenu();" class="w-full bg-cream-100 text-noir border border-gold-300 py-3 rounded-2xl font-bold uppercase text-xs tracking-wider text-center flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-cart-shopping text-gold-600"></i>
+                    <span>Ver Mi Carrito (<span id="cart-badge-mobile-menu">0</span>)</span>
+                </button>
+                <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full gold-gradient-bg text-white py-3.5 rounded-2xl font-bold uppercase text-xs tracking-wider text-center flex items-center justify-center space-x-2 shadow-md">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservar Mi Hora Directa</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative overflow-hidden pt-8 pb-16 lg:py-24 bg-gradient-to-b from-white via-cream-100 to-cream-200">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-gold-200/40 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-blush-100/60 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="mb-10 rounded-3xl overflow-hidden shadow-2xl border-2 border-gold-300 relative group">
+                <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/portada%201%20divas.jpeg" alt="DIVAS ELEY Portada Oficial" class="w-full h-56 sm:h-72 md:h-96 lg:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-noir/85 via-noir/25 to-transparent flex items-end p-6 sm:p-8">
+                    <div class="text-white space-y-1.5">
+                        <span class="bg-gold-400 text-noir font-bold text-[10px] sm:text-xs uppercase px-3 py-1 rounded-full tracking-widest inline-block shadow-md">
+                            ✨ Salón Oficial &amp; Centro de Estética Integral
+                        </span>
+                        <h2 class="font-heading font-bold text-xl sm:text-3xl text-gold-300">Bienvenida a la Experiencia DIVAS ELEY</h2>
+                        <p class="text-xs sm:text-sm text-gray-200 font-light">Cosmetología, Estética Corporal, Uñas, Cejas &amp; Bienestar en Los Ángeles, Chile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="flex justify-center lg:justify-start">
+                        <div class="inline-flex items-center space-x-2 bg-white border border-gold-300 rounded-full px-4 py-1.5 shadow-sm text-xs font-bold text-gold-800 uppercase tracking-widest text-center">
+                            <i class="fa-solid fa-sparkles text-gold-500"></i>
+                            <span>LOS ÁNGELES, CHILE • ATENCIÓN PREVIA RESERVACIÓN • LUNES A SÁBADO</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="block mb-6 mx-auto lg:mx-0 w-full max-w-2xl sm:max-w-3xl lg:max-w-5xl">
+                            <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/DIVAS%20logo.png" alt="DIVAS ELEY - Cosmetología y Estética Integral" class="h-44 sm:h-72 md:h-96 lg:h-[420px] w-full object-contain mx-auto lg:mx-0 drop-shadow-xl transform hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x150/0F0F10/D4AF37?text=DIVAS+ELEY';">
+                        </div>
+
+                        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-noir leading-tight">
+                            Cosmetología & <br>
+                            <span class="font-serif italic font-normal gold-gradient-text">Estética Integral</span>
+                        </h1>
+                    </div>
+
+                    <p class="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Belleza, bienestar y cuidado integral en un solo lugar. Selecciona a tu especialista preferida, arma tu carrito con tus tratamientos deseados y confirma cómodamente por WhatsApp.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+                        <a href="#catalogo" class="w-full sm:w-auto gold-gradient-bg text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest shadow-lg hover:shadow-gold-glow flex items-center justify-center space-x-3 transition transform hover:scale-105">
+                            <span>VER SERVICIOS & ARMAR CARRITO</span>
+                            <i class="fa-solid fa-cart-plus text-sm"></i>
+                        </a>
+
+                        <button onclick="openBookingModal()" class="w-full sm:w-auto bg-white border border-gold-300 hover:border-gold-500 text-noir px-7 py-4 rounded-full font-bold uppercase text-xs tracking-widest text-center transition shadow-sm hover:bg-gold-50">
+                            RESERVA RÁPIDA DIRECTA
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none space-y-6">
+                        <div class="relative bg-noir text-white rounded-3xl p-6 sm:p-8 border-2 border-gold-400 shadow-2xl space-y-5 sparkle-pulse">
+                            <div class="flex items-center justify-between border-b border-gold-400/30 pb-4">
+                                <span class="text-xs font-bold uppercase tracking-widest text-gold-300 bg-gold-400/10 px-3 py-1 rounded-full border border-gold-400/40">
+                                    ✨ Reserva Tu Cita Digital
+                                </span>
+                            </div>
+
+                            <div class="space-y-4 pt-1">
+                                <h3 class="font-heading font-bold text-xl text-gold-300">Atención Personalizada</h3>
+                                <p class="text-xs text-gray-300 font-light leading-relaxed">
+                                    En <strong class="text-gold-300 font-semibold">DIVAS ELEY</strong> puedes seleccionar a tu profesional preferida directamente al momento de confirmar tu reserva en el carrito o en nuestro botón directo.
+                                </p>
+                                
+                                <div class="space-y-2.5 bg-gold-400/10 p-4 rounded-2xl border border-gold-400/30 text-xs">
+                                    <div class="flex items-center space-x-2.5">
+                                        <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                        <span class="text-gray-200 font-medium">Selección de Profesional en Carrito</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5">
+                                        <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                        <span class="text-gray-200 font-medium">Confirmación directa e inmediata en WhatsApp</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5">
+                                        <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                        <span class="text-gray-200 font-medium">Ubicación Céntrica: Galería Monte Dorado</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onclick="openBookingModal()" class="w-full gold-gradient-bg text-white py-4 rounded-2xl font-bold text-xs uppercase tracking-widest shadow-lg flex items-center justify-center space-x-2 hover:scale-[1.01] transition">
+                                <i class="fa-regular fa-calendar-check text-sm"></i>
+                                <span>AGENDAR MI CITA AHORA</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / PHILOSOPHY SECTION (CONÓCENOS) -->
+    <section id="conocenos" class="py-16 lg:py-24 bg-white border-y border-gold-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-800 bg-gold-50 px-4 py-1.5 rounded-full border border-gold-200 inline-block">
+                        ✨ Tu Espacio de Belleza & Calma
+                    </span>
+
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-noir">
+                        Bienvenida a <span class="font-serif italic font-normal gold-gradient-text">DIVAS ELEY</span>
+                    </h2>
+
+                    <p class="text-gray-700 text-sm sm:text-base font-light leading-relaxed">
+                        En DIVAS ELEY creamos un espacio delicado y profesional dedicado al cuidado integral de tu belleza y bienestar. Somos especialistas en cosmetología y estética integral en Los Ángeles.
+                    </p>
+
+                    <div class="pt-2">
+                        <a href="#catalogo" class="gold-gradient-bg text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-md inline-flex items-center space-x-2">
+                            <span>Explorar Todos los Servicios</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4 relative">
+                        <div class="space-y-4">
+                            <div class="rounded-3xl overflow-hidden shadow-lg border border-gold-200">
+                                <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/Ba%C3%B1o%20de%20Acr%C3%ADlico%20%2B%20Dise%C3%B1o.jpg" alt="Tratamiento Facial" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition duration-500">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-6">
+                            <div class="rounded-3xl overflow-hidden shadow-lg border border-gold-200">
+                                <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/depilacion%20de%20rostro%20con%20cera.jpg" alt="Lifting" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG / SERVICES SECTION -->
+    <section id="catalogo" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-10">
+                <span class="text-xs uppercase font-bold tracking-widest text-gold-800 bg-gold-50 px-4 py-1.5 rounded-full border border-gold-200">
+                    Catálogo Oficial de Servicios
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-noir">
+                    Encuentra tu tratamiento & <span class="font-serif italic font-normal gold-gradient-text">agrega al carrito</span>
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base font-light">
+                    Selecciona uno o más servicios para armar tu carrito de reserva con precios en pesos chilenos (CLP).
+                </p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mb-6">
+                <div class="max-w-md mx-auto relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gold-500"></i>
+                    <input type="text" id="catalog-search" placeholder="Buscar servicio (ej. Limpieza, Masaje, Botox, Uñas...)" class="w-full pl-11 pr-4 py-3.5 rounded-full border border-gold-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none text-xs transition shadow-sm bg-cream-50">
+                </div>
+            </div>
+
+            <!-- BARRA DE NAVEGACIÓN DE CATEGORÍAS -->
+            <div class="relative max-w-6xl mx-auto mb-10">
+                <div class="flex items-center">
+                    <button onclick="scrollCategories(-280)" class="z-20 bg-white hover:bg-gold-50 text-gold-700 border-2 border-gold-300 p-2.5 sm:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 active:scale-95 shrink-0 mr-1 sm:mr-3 focus:outline-none flex items-center justify-center group" aria-label="Izquierda">
+                        <i class="fa-solid fa-chevron-left text-sm group-hover:-translate-x-0.5 transition-transform"></i>
+                    </button>
+
+                    <div id="category-pills" class="flex items-center justify-start overflow-x-auto py-2 space-x-2 no-scrollbar scroll-smooth w-full px-1">
+                        <!-- Populated via JS -->
+                    </div>
+
+                    <button onclick="scrollCategories(280)" class="z-20 bg-white hover:bg-gold-50 text-gold-700 border-2 border-gold-300 p-2.5 sm:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 active:scale-95 shrink-0 ml-1 sm:ml-3 focus:outline-none flex items-center justify-center group" aria-label="Derecha">
+                        <i class="fa-solid fa-chevron-right text-sm group-hover:translate-x-0.5 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Populated dynamically -->
+            </div>
+
+            <div id="no-services-found" class="hidden text-center py-12 space-y-4">
+                <i class="fa-solid fa-sparkles text-4xl text-gold-400"></i>
+                <p class="text-lg font-serif font-bold text-noir">No encontramos servicios que coincidan</p>
+                <button onclick="resetCatalogFilter()" class="text-xs font-bold text-gold-600 underline uppercase tracking-widest">Ver todos los servicios</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTÉTICA CORPORAL SECTION -->
+    <section id="estetica-corporal" class="py-16 lg:py-24 bg-cream-100 border-y border-gold-200 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-800 bg-white px-4 py-1.5 rounded-full border border-gold-300 shadow-sm inline-block">✨ Modelación & Firmeza</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-noir">
+                        Estética Corporal & <span class="font-serif italic font-normal gold-gradient-text">Cuidado Personal</span>
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base font-light leading-relaxed">
+                        Tratamientos orientados a favorecer el bienestar, estimular la circulación y mejorar la apariencia general de la piel.
+                    </p>
+                    <button onclick="filterCategory('🔥 PLANES Y TRATAMIENTOS REDUCTIVOS'); scrollToCatalog();" class="gold-gradient-bg text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-md">
+                        Ver Tratamientos Corporales
+                    </button>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="rounded-3xl overflow-hidden shadow-xl border-2 border-gold-300">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Masajes y Estética Corporal" class="w-full h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIFT CARDS SECTION -->
+    <section id="giftcards" class="py-16 lg:py-24 bg-white border-t border-gold-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-cream-200 via-white to-gold-50 rounded-3xl border border-gold-300 p-6 sm:p-10 shadow-xl relative overflow-hidden">
+                <div class="text-center max-w-2xl mx-auto space-y-3 mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-800 bg-white px-4 py-1.5 rounded-full border border-gold-300 shadow-sm inline-block">🎁 Regala Una Experiencia Única</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-noir">Personaliza tu <span class="font-serif italic font-normal gold-gradient-text">Gift Card Digital</span></h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-gold-300/80 shadow-md space-y-5">
+                        <form id="giftcard-form" onsubmit="handleGiftCardSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-800 mb-1.5 uppercase tracking-wider">1. ¿Qué deseas regalar? (Categoría) *</label>
+                                <select id="gc-category" onchange="onGiftCardCategoryChange()" required class="w-full px-4 py-3 rounded-xl border border-gold-200 text-xs bg-cream-50 font-medium">
+                                    <option value="">-- Selecciona una categoría --</option>
+                                    <option value="capilar">💇‍♀️ Capilar</option>
+                                    <option value="depilacion-facial">🌸 Depilación Facial</option>
+                                    <option value="pestanas">👁️ Pestañas</option>
+                                    <option value="cejas">👑 Cejas</option>
+                                    <option value="unas">💅 Uñas</option>
+                                    <option value="depilacion-corporal">🦵 Depilación Corporal</option>
+                                    <option value="cuidado-facial">🧖‍♀️ Cuidado Facial</option>
+                                    <option value="estetica-corporal">🔥 Estética Corporal</option>
+                                    <option value="masajes">💆‍♀️ Masajes Relajantes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-800 mb-1.5 uppercase tracking-wider">2. Selecciona el Servicio y Precio *</label>
+                                <select id="gc-service" onchange="onGiftCardServiceChange()" required class="w-full px-4 py-3 rounded-xl border border-gold-200 text-xs bg-white font-medium">
+                                    <option value="">-- Primero selecciona una categoría --</option>
+                                </select>
+                            </div>
+                            <div id="gc-variant-container" class="hidden">
+                                <label class="block text-xs font-bold text-gold-800 mb-1.5 uppercase tracking-wider">Opción o Variante *</label>
+                                <select id="gc-variant" onchange="updateGiftCardLivePreview()" class="w-full px-4 py-3 rounded-xl border border-gold-300 text-xs bg-gold-50 font-semibold"></select>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-800 mb-1 uppercase tracking-wider">PARA: (Destinatario) *</label>
+                                    <input type="text" id="gc-para" oninput="updateGiftCardLivePreview()" placeholder="Ej. Valentina Morales" required class="w-full px-4 py-3 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-800 mb-1 uppercase tracking-wider">DE: (Quien regala) *</label>
+                                    <input type="text" id="gc-de" oninput="updateGiftCardLivePreview()" placeholder="Ej. Camila" required class="w-full px-4 py-3 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-800 mb-1 uppercase tracking-wider">CORREO: *</label>
+                                <input type="email" id="gc-email" oninput="updateGiftCardLivePreview()" placeholder="correo@ejemplo.com" required class="w-full px-4 py-3 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-800 mb-1 uppercase tracking-wider">Mensaje Personalizado *</label>
+                                <textarea id="gc-mensaje" oninput="updateGiftCardLivePreview()" rows="2" class="w-full px-4 py-3 rounded-xl border border-gold-200 text-xs bg-cream-50 resize-none font-medium">Disfruta este momento único para ti.</textarea>
+                            </div>
+                            <button type="submit" class="w-full gold-gradient-bg text-white font-bold py-4 rounded-2xl uppercase text-xs tracking-widest shadow-lg flex items-center justify-center space-x-3">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>SOLICITAR GIFT CARD POR WHATSAPP</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="w-full bg-noir rounded-3xl p-6 sm:p-8 text-white shadow-2xl border-2 border-gold-400 relative overflow-hidden flex flex-col justify-between min-h-[380px]">
+                            <div class="flex justify-between items-center border-b border-gold-400/30 pb-4">
+                                <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/DIVAS%20logo.png" alt="Logo" class="h-8 object-contain">
+                                <span class="bg-gold-400/20 text-gold-300 text-[10px] font-bold uppercase px-3 py-1 rounded-full border border-gold-400/40">✨ Gift Card</span>
+                            </div>
+                            <div class="my-5 space-y-3">
+                                <p class="text-[10px] text-gray-400 uppercase">Para:</p>
+                                <h3 id="preview-gc-para" class="font-heading font-bold text-xl text-white gold-gradient-text">[Destinatario]</h3>
+                                <div class="bg-white/5 p-3 rounded-xl border border-gold-400/20 space-y-1">
+                                    <p id="preview-gc-servicio" class="text-xs font-bold text-white">Selecciona un servicio...</p>
+                                    <p id="preview-gc-precio" class="text-sm font-heading font-extrabold text-gold-400">$0 CLP</p>
+                                </div>
+                                <p id="preview-gc-mensaje" class="text-xs italic text-gray-300 font-serif">"Disfruta este momento."</p>
+                                <p class="text-[10px] text-gray-400">De: <span id="preview-gc-de" class="text-white font-semibold">[Tú]</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONVENIOS EMPRESARIALES SECTION -->
+    <section id="convenios" class="py-16 lg:py-24 bg-cream-100 border-t border-gold-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-xs uppercase font-bold tracking-widest text-gold-800 bg-white px-4 py-1.5 rounded-full border border-gold-200 shadow-sm inline-block">
+                    Beneficios Corporativos & Alianzas
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-noir">
+                    Beneficios y Convenios para <span class="font-serif italic font-normal gold-gradient-text">Empresas</span>
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base font-light">
+                    En DIVAS ELEY ofrecemos convenios especiales para equipos de trabajo u organizaciones en Los Ángeles.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-3xl border border-gold-200 shadow-sm overflow-hidden text-center space-y-4 hover:shadow-xl transition flex flex-col justify-between">
+                    <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/Gemini_Generated_Image_7g6mu97g6mu97g6m.jpg" alt="Deportistas" class="w-full h-40 object-cover">
+                    <div class="p-6 space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-gold-50 border border-gold-300 flex items-center justify-center text-gold-600 mx-auto text-xl shadow-sm">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-noir">Gimnasios & Deportistas</h3>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed">Alianzas para socios y alumnas con tarifas preferenciales en drenaje linfático y masajes.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl border border-gold-200 shadow-sm overflow-hidden text-center space-y-4 hover:shadow-xl transition flex flex-col justify-between">
+                    <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/corporativo.jpg" alt="Pymes" class="w-full h-40 object-cover">
+                    <div class="p-6 space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-gold-50 border border-gold-300 flex items-center justify-center text-gold-600 mx-auto text-xl shadow-sm">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-noir">Pymes & Corporaciones</h3>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed">Beneficios de autocuidado para colaboradoras en manicure, limpieza facial y masajes.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl border border-gold-200 shadow-sm overflow-hidden text-center space-y-4 hover:shadow-xl transition flex flex-col justify-between">
+                    <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/pymes.jpg" alt="Equipos" class="w-full h-40 object-cover">
+                    <div class="p-6 space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-gold-50 border border-gold-300 flex items-center justify-center text-gold-600 mx-auto text-xl shadow-sm">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-noir">Emprendedores & Equipos</h3>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed">Convenios para fechas especiales con paquetes o Gift Cards corporativas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://wa.me/56937875118?text=Hola%20DIVAS%20ELEY%20%E2%9C%A8%2C%20me%20interesa%20conocer%20los%20convenios%20y%20beneficios%20para%20empresas." target="_blank" class="gold-gradient-bg text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest shadow-md inline-flex items-center space-x-3 hover:scale-105 transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>QUIERO UN CONVENIO PARA MI EMPRESA</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRABAJA CON NOSOTRAS SECTION -->
+    <section id="trabaja-con-nosotras" class="py-16 lg:py-24 bg-gradient-to-b from-cream-100 to-white border-t border-gold-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-noir text-white rounded-3xl p-8 sm:p-12 border-2 border-gold-400 shadow-2xl relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-300 bg-gold-400/10 px-4 py-1.5 rounded-full border border-gold-400/30 inline-block">✨ Oportunidades Laborales</span>
+                        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white">
+                            ¿Amas la belleza y la estética? <br>
+                            <span class="font-serif italic font-normal gold-gradient-text">Trabaja con Nosotras</span>
+                        </h2>
+                        <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                            Buscamos profesionales talentosas en cosmetología, manicura, cejas, pestañas, masajes y estética corporal en Los Ángeles, Chile.
+                        </p>
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="https://wa.me/56937875118?text=Hola%20DIVAS%20ELEY%20%E2%9C%A8%2C%20me%20interesa%20postular%20y%20enviar%20mi%20curr%C3%ADculum." target="_blank" class="w-full sm:w-auto gold-gradient-bg text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest shadow-lg flex items-center justify-center space-x-3 hover:scale-105 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>POSTULAR Y ENVIAR CV POR WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-gold-300/40 max-w-sm w-full">
+                            <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/lugar1%20divas.jpeg" alt="Equipo" class="w-full h-64 object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonios" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-xs uppercase font-bold tracking-widest text-gold-800 bg-gold-50 px-4 py-1.5 rounded-full border border-gold-200">Opiniones Reales</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-noir">
+                    Lo que dicen <span class="font-serif italic font-normal gold-gradient-text">nuestras clientas</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-cream-100 p-6 rounded-3xl border border-gold-200 shadow-sm space-y-4 flex flex-col justify-between">
+                    <p class="text-xs text-gray-700 italic leading-relaxed font-light">"Me realizé una lipo sin cirugia y fue maravilloso, me quitaron la grasa localizada de mis caderas. ¡100% recomendada!"</p>
+                    <div class="pt-4 border-t border-gold-200/60 flex items-center justify-between">
+                        <div><p class="font-bold text-xs text-noir">Javiera Contreras</p><p class="text-[10px] text-gray-500">Los Ángeles</p></div>
+                        <span class="text-[10px] bg-gold-50 text-gold-800 font-bold px-2.5 py-0.5 rounded-full border border-gold-200">Verificada</span>
+                    </div>
+                </div>
+                <div class="bg-cream-100 p-6 rounded-3xl border border-gold-200 shadow-sm space-y-4 flex flex-col justify-between">
+                    <p class="text-xs text-gray-700 italic leading-relaxed font-light">"Me encanto he ido reiteradas veces a servicios de lifting o esmaltado permanente. Agendar por la página elegiendo a la profesional fue super fácil."</p>
+                    <div class="pt-4 border-t border-gold-200/60 flex items-center justify-between">
+                        <div><p class="font-bold text-xs text-noir">Catalina Herrera</p><p class="text-[10px] text-gray-500">Los Ángeles</p></div>
+                        <span class="text-[10px] bg-gold-50 text-gold-800 font-bold px-2.5 py-0.5 rounded-full border border-gold-200">Verificada</span>
+                    </div>
+                </div>
+                <div class="bg-cream-100 p-6 rounded-3xl border border-gold-200 shadow-sm space-y-4 flex flex-col justify-between">
+                    <p class="text-xs text-gray-700 italic leading-relaxed font-light">"Las uñas Soft Gel y el perfilado de cejas me quedaron espectaculares. Se nota el amor y la dedicación en cada detalle."</p>
+                    <div class="pt-4 border-t border-gold-200/60 flex items-center justify-between">
+                        <div><p class="font-bold text-xs text-noir">Marcela S.</p><p class="text-[10px] text-gray-500">Los Ángeles</p></div>
+                        <span class="text-[10px] bg-gold-50 text-gold-800 font-bold px-2.5 py-0.5 rounded-full border border-gold-200">Verificada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 lg:py-24 bg-cream-100 border-t border-gold-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-xs uppercase font-bold tracking-widest text-gold-800 bg-white px-4 py-1.5 rounded-full border border-gold-200 shadow-sm inline-block">Resuelve tus dudas</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-noir">Preguntas <span class="font-serif italic font-normal gold-gradient-text">Frecuentes</span></h2>
+            </div>
+            <div class="space-y-4" id="faq-accordion">
+                <div class="bg-white rounded-2xl border border-gold-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex items-center justify-between font-bold text-sm text-noir focus:outline-none">
+                        <span>¿Cómo funciona el sistema de reserva digital?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-600 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-xs text-gray-600 font-light leading-relaxed border-t border-gold-100 pt-3">
+                        Seleccionas tu servicio del catálogo, escoges la profesional de tu preferencia, eliges la fecha y hora e ingresas tus datos. Al presionar "CONFIRMAR POR WHATSAPP", el sistema genera el mensaje oficial con todos tus datos para que nuestro equipo confirme la hora.
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-gold-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex items-center justify-between font-bold text-sm text-noir focus:outline-none">
+                        <span>¿Puedo elegir con qué profesional atenderme?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-600 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-xs text-gray-600 font-light leading-relaxed border-t border-gold-100 pt-3">
+                        ¡Sí! Tanto en el carrito como en el módulo de reserva rápida puedes elegir a tu especialista favorita (Nicol, Katty, Camila, Carolina o Aline) o bien seleccionar "Sin preferencia" para que te atienda la primera profesional disponible.
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-gold-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex items-center justify-between font-bold text-sm text-noir focus:outline-none">
+                        <span>¿Atienden a hombres?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-600 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-xs text-gray-600 font-light leading-relaxed border-t border-gold-100 pt-3">
+                        ¡Por supuesto! Todos nuestros tratamientos cosmetológicos faciales, masajes relajantes y descontracturantes están abiertos a público masculino.
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-gold-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex items-center justify-between font-bold text-sm text-noir focus:outline-none">
+                        <span>¿Dónde están ubicadas en Los Ángeles?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-600 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-xs text-gray-600 font-light leading-relaxed border-t border-gold-100 pt-3">
+                        Atendemos en la ciudad de Los Ángeles, Región del Biobío, Chile. La ubicación exacta es Valdivia 548, Galería Monte Dorado, Stand 34 y 35, Los Ángeles. Las recomendaciones de llegada se envían directamente al confirmar tu reserva vía WhatsApp (+56 9 3787 5118).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-noir text-white pt-16 pb-12 border-t border-gold-400/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-gray-800">
+                <div class="md:col-span-5 space-y-4">
+                    <div class="inline-block mb-2">
+                        <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/DIVAS%20logo.png" alt="DIVAS ELEY Footer Logo" class="h-20 sm:h-28 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/200x80/0F0F10/D4AF37?text=DIVAS+ELEY';">
+                    </div>
+                    <p class="text-xs text-gray-400 font-light leading-relaxed max-w-sm">
+                        Plataforma digital oficial de reservas de DIVAS ELEY en Los Ángeles, Chile. Cuidado de la piel, cosmetología, estética corporal, cejas, pestañas, masajes y uñas.
+                    </p>
+                    <div class="flex items-center space-x-3 text-gold-400 pt-2">
+                        <a href="https://wa.me/56937875118" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-900 border border-gold-400/40 flex items-center justify-center hover:bg-gold-400 hover:text-noir transition" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/divaseley/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-900 border border-gold-400/40 flex items-center justify-center hover:bg-gold-400 hover:text-noir transition" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100049126462606&locale=es_LA" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-900 border border-gold-400/40 flex items-center justify-center hover:bg-gold-400 hover:text-noir transition" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/6J1QxuwtiPK6WXiq6" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-900 border border-gold-400/40 flex items-center justify-center hover:bg-gold-400 hover:text-noir transition" aria-label="Google Maps">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-heading text-xs font-bold text-gold-300 uppercase tracking-widest">Navegación</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#inicio" class="hover:text-gold-300 transition">Inicio</a></li>
+                        <li><a href="#conocenos" class="hover:text-gold-300 transition">Nosotras</a></li>
+                        <li><a href="#profesionales" class="hover:text-gold-300 transition">Equipo</a></li>
+                        <li><a href="#catalogo" class="hover:text-gold-300 transition">Catálogo & Precios</a></li>
+                        <li><a href="#estetica-corporal" class="hover:text-gold-300 transition">Estética Corporal</a></li>
+                        <li><a href="#giftcards" class="hover:text-gold-300 transition">Gift Cards</a></li>
+                        <li><a href="#convenios" class="hover:text-gold-300 transition">Convenios para Empresas</a></li>
+                        <li><a href="#trabaja-con-nosotras" class="hover:text-gold-300 transition">Trabaja con Nosotras</a></li>
+                        <li><a href="#testimonios" class="hover:text-gold-300 transition">Opiniones</a></li>
+                        <li><a href="#faq" class="hover:text-gold-300 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-heading text-xs font-bold text-gold-300 uppercase tracking-widest">Atención & Contacto</h4>
+                    <ul class="space-y-3 text-xs text-gray-400">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-gold-400 mt-0.5"></i>
+                            <span>Valdivia 548, Galería Monte Dorado, Stand 34 y 35, Los Ángeles, Biobío</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-gold-400"></i>
+                            <a href="https://wa.me/56937875118" target="_blank" class="hover:text-gold-300 transition">+56 9 3787 5118</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-clock text-gold-400 mt-0.5"></i>
+                            <span>Atención mediante reservaciones previas por WhatsApp</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500">
+                <p>© 2026 DIVAS ELEY - Cosmetología & Estética Integral. Los Ángeles, Chile. / CREADA POR DGYMGRAPHICSSUDIO.</p>
+                <div class="flex space-x-4 mt-2 sm:mt-0">
+                    <a href="#" onclick="showCustomModal('Privacidad', 'DIVAS ELEY utiliza únicamente los datos ingresados para la gestión directa de tu reserva por WhatsApp.'); return false;" class="hover:underline">Privacidad</a>
+                    <a href="#" onclick="showCustomModal('Términos', 'Las solicitudes de hora quedan sujetas a confirmación previa por WhatsApp.'); return false;" class="hover:underline">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/56937875118?text=Hola%20DIVAS%20ELEY%20%E2%9C%A8%20quisiera%20realizar%20una%20consulta." target="_blank" class="fixed bottom-20 lg:bottom-6 right-5 z-40 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full flex items-center space-x-2 shadow-2xl transition hover:scale-105 group border-2 border-white" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="text-xs font-bold uppercase tracking-wider hidden sm:inline">HABLAR POR WHATSAPP</span>
+    </a>
+
+    <!-- Sticky Mobile Bottom Bar with Cart Button -->
+    <div class="fixed bottom-0 left-0 right-0 z-30 bg-noir text-white border-t border-gold-400/40 p-3 flex lg:hidden items-center justify-between shadow-2xl">
+        <button onclick="openCartDrawer()" class="flex items-center space-x-2 pl-2 text-left">
+            <div class="relative">
+                <i class="fa-solid fa-cart-shopping text-gold-400 text-lg"></i>
+                <span id="cart-badge-sticky" class="absolute -top-2 -right-2 bg-gold-500 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+            </div>
+            <div>
+                <p class="font-heading font-bold text-xs text-gold-400">Mi Carrito</p>
+                <p id="sticky-cart-total" class="text-[10px] text-gray-300 font-bold">$0 CLP</p>
+            </div>
+        </button>
+        <button onclick="openCartDrawer()" class="gold-gradient-bg text-white px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest flex items-center space-x-1.5 shadow">
+            <i class="fa-solid fa-circle-check text-xs"></i>
+            <span>Ver Carrito</span>
+        </button>
+    </div>
+
+    <!-- SHOPPING CART DRAWER -->
+    <div id="cart-drawer-backdrop" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-md transition-opacity">
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white border-l-2 border-gold-400 shadow-2xl flex flex-col justify-between">
+                
+                <div class="bg-noir text-white p-5 border-b border-gold-400/30 flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-cart-shopping text-gold-400 text-lg"></i>
+                        <div>
+                            <h3 class="font-heading font-bold text-sm text-gold-400">Tu Carrito de Reserva</h3>
+                            <p class="text-[10px] text-gray-300">Selecciona tus tratamientos y confirma</p>
+                        </div>
+                    </div>
+                    <button onclick="closeCartDrawer()" class="text-gray-400 hover:text-white p-2">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <div class="p-5 overflow-y-auto space-y-6 flex-grow">
+                    <div>
+                        <div class="flex items-center justify-between mb-3 border-b border-gray-100 pb-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-noir">Servicios Seleccionados</span>
+                            <button onclick="clearCart()" class="text-[10px] text-red-500 hover:underline font-semibold">Vaciar Carrito</button>
+                        </div>
+                        <div id="cart-items-container" class="space-y-3">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-2 border-t border-gray-100">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-noir">Datos para confirmar tu hora</h4>
+                        
+                        <!-- Selección de Profesional en Carrito -->
+                        <div>
+                            <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">Profesional Preferida *</label>
+                            <select id="cart-profesional" required class="w-full px-3 py-2 rounded-xl border border-gold-200 text-xs bg-white font-medium text-gray-800">
+                               <option value="Sin preferencia (Cualquiera disponible)">✨ Sin preferencia (Cualquiera disponible)</option>
+                                <option value="Nicol Inostroza (Especialista Cosmetología)">Nicol Inostroza — Especialista Cosmetología</option>
+                                <option value="Katty Rodríguez (Especialista Corporal)">Katty Rodríguez — Especialista Corporal</option>
+                                <option value="Camila Rodríguez (Lash Designer & Master)">Camila Rodríguez — Lash Designer & Master</option>
+                                <option value="Aline Pereira (Maquillista, Peinados & Esmaltado)">Aline Pereira — Maquillaje, Peinados & Uñas</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <input type="text" id="cart-nombre" placeholder="Nombre *" required class="w-full px-3 py-2 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                            <input type="text" id="cart-apellido" placeholder="Apellido *" required class="w-full px-3 py-2 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <input type="tel" id="cart-celular" placeholder="WhatsApp *" required class="w-full px-3 py-2 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                            <input type="email" id="cart-correo" placeholder="Correo *" required class="w-full px-3 py-2 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-[10px] font-bold text-gray-600 mb-0.5">Fecha * (Lunes a Sábado)</label>
+                                <input type="date" id="cart-fecha" onchange="checkCartDate()" required class="w-full px-3 py-2 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold text-gray-600 mb-0.5">Hora *</label>
+                                <select id="cart-hora" required class="w-full px-3 py-2 rounded-xl border border-gold-200 text-xs bg-white">
+                                    <option value="">Seleccionar hora</option>
+                                    <option value="10:00 hrs">10:00 hrs</option>
+                                    <option value="10:30 hrs">10:30 hrs</option>
+                                    <option value="11:00 hrs">11:00 hrs</option>
+                                    <option value="11:30 hrs">11:30 hrs</option>
+                                    <option value="12:00 hrs">12:00 hrs</option>
+                                    <option value="12:30 hrs">12:30 hrs</option>
+                                    <option value="13:00 hrs">13:00 hrs</option>
+                                    <option value="13:30 hrs">13:30 hrs</option>
+                                    <option value="14:00 hrs">14:00 hrs</option>
+                                    <option value="14:30 hrs">14:30 hrs</option>
+                                    <option value="15:00 hrs">15:00 hrs</option>
+                                    <option value="15:30 hrs">15:30 hrs</option>
+                                    <option value="16:00 hrs">16:00 hrs</option>
+                                    <option value="16:30 hrs">16:30 hrs</option>
+                                    <option value="17:00 hrs">17:00 hrs</option>
+                                    <option value="17:30 hrs">17:30 hrs</option>
+                                    <option value="18:00 hrs">18:00 hrs</option>
+                                    <option value="18:30 hrs">18:30 hrs</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-5 bg-noir text-white border-t border-gold-400/40 space-y-3">
+                    <div class="space-y-1 text-xs">
+                        <div class="flex justify-between text-sm font-bold text-white pt-1">
+                            <span>Total Estimado:</span>
+                            <span id="cart-summary-total" class="font-heading text-lg gold-gradient-text">$0 CLP</span>
+                        </div>
+                    </div>
+                    <button onclick="sendCartBookingToWhatsApp()" class="w-full gold-gradient-bg text-white py-3.5 rounded-2xl font-bold uppercase text-xs tracking-widest shadow-lg flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>ENVIAR RESERVA POR WHATSAPP</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK BOOKING MODAL -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/75 backdrop-blur-md p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-lg w-full border-2 border-gold-400 shadow-2xl overflow-hidden relative my-auto">
+            <div class="bg-noir text-white p-5 relative border-b border-gold-400/30 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <img src="https://6a891d2297833836f65581a1.imgix.net/sandbox/DIVAS%20logo.png" alt="Logo" class="h-10 object-contain">
+                    <div>
+                        <h3 class="font-heading font-bold text-xs uppercase tracking-wider text-gold-400">SOLICITUD DE RESERVA</h3>
+                        <p class="text-[9px] text-gray-300 uppercase tracking-widest">LOS ÁNGELES, CHILE • LUNES A SÁBADO</p>
+                    </div>
+                </div>
+                <button onclick="closeBookingModal()" class="text-gray-400 hover:text-white text-xl p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="modal-booking-form" onsubmit="handleSingleBookingSubmit(event)" class="p-6 space-y-4 text-left">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">Nombre *</label>
+                        <input type="text" required id="modal-nombre" placeholder="Nombre" class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">Apellido *</label>
+                        <input type="text" required id="modal-apellido" placeholder="Apellido" class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">WhatsApp *</label>
+                        <input type="tel" required id="modal-celular" placeholder="+56 9..." class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">Correo *</label>
+                        <input type="email" required id="modal-correo" placeholder="correo@ejemplo.com" class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                    </div>
+                </div>
+
+                <!-- Selección de Profesional en Modal -->
+                <div>
+                    <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">Profesional Preferida *</label>
+                    <select id="modal-profesional" required class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-white font-medium text-gray-800">
+                        <option value="Sin preferencia (Cualquiera disponible)">✨ Sin preferencia (Cualquiera disponible)</option>
+                        <option value="Nicol Inostroza (Especialista Estetica facial y corpotal)">Nicol Inostroza — Especialista Estetica facial y corpotal</option>
+                        <option value="Katty Rodríguez (Especialista en Uñitas Perfectas)">Katty Rodríguez — EEspecialista en Uñitas Perfectas</option>
+                        <option value="Fran Ramos (Especialista en Uñitas Perfectas)">Camila Rodríguez — Especialista en Uñitas Perfectas/option>
+                        <option value="Camila Rodríguez (Especialista en Cejas y Pestañas Perfectas)">Camilia Rodríguez —Especialista en Cejas y Pestañas Perfectas</option>
+                        <option value="Aline Pereira (Maquillista, Peinados & Esmaltado)">Aline Pereira — Maquillaje, Peinados & Uñas</option>
+                    </select>
+                </div>
+
+                <!-- Step 1: Categoria -->
+                <div>
+                    <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">1. Categoría de Servicio *</label>
+                    <select id="modal-categoria" onchange="onModalCategoryChange()" required class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-cream-50 font-medium">
+                        <option value="">-- Selecciona una categoría --</option>
+                        <option value="💇‍♀️ SERVICIOS CAPILARES">💇‍♀️ Servicios Capilares</option>
+                        <option value="🌸 DEPILACIÓN FACIAL">🌸 Depilación Facial</option>
+                        <option value="👁️ PESTAÑAS">👁️ Pestañas</option>
+                        <option value="👑 CEJAS PERFECTAS">👑 Cejas Perfectas</option>
+                        <option value="💅 UÑAS">💅 Uñas</option>
+                        <option value="🦵 DEPILACIÓN CORPORAL">🦵 Depilación Corporal</option>
+                        <option value="🧖‍♀️ CUIDADO FACIAL">🧖‍♀️ Cuidado Facial</option>
+                        <option value="🔥 PLANES Y TRATAMIENTOS REDUCTIVOS">🔥 Estética Corporal & Reductivos</option>
+                        <option value="💆‍♀️ MASAJES RELAJANTES">💆‍♀️ Masajes Relajantes</option>
+                    </select>
+                </div>
+                
+                <!-- Step 2: Servicio Especifico -->
+                <div>
+                    <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">2. Servicio Específico *</label>
+                    <select required id="modal-servicio" onchange="onModalServiceChange()" class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-white font-medium">
+                        <option value="">-- Primero selecciona una categoría --</option>
+                    </select>
+                </div>
+
+                <div id="modal-variant-container" class="hidden">
+                    <label class="block text-[10px] font-bold text-gold-800 uppercase mb-1">Opción / Variante del Servicio *</label>
+                    <select id="modal-variante" onchange="updateModalPriceDisplay()" class="w-full px-3 py-2.5 rounded-xl border border-gold-300 text-xs bg-gold-50 font-semibold"></select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">Fecha * (Lunes a Sábado)</label>
+                        <input type="date" required id="modal-fecha" onchange="checkModalDate()" class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-cream-50">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-700 uppercase mb-1">Hora *</label>
+                        <select required id="modal-hora" class="w-full px-3 py-2.5 rounded-xl border border-gold-200 text-xs bg-white">
+                            <option value="">Seleccionar hora</option>
+                            <option value="10:00 hrs">10:00 hrs</option>
+                            <option value="10:30 hrs">10:30 hrs</option>
+                            <option value="11:00 hrs">11:00 hrs</option>
+                            <option value="11:30 hrs">11:30 hrs</option>
+                            <option value="12:00 hrs">12:00 hrs</option>
+                            <option value="12:30 hrs">12:30 hrs</option>
+                            <option value="13:00 hrs">13:00 hrs</option>
+                            <option value="13:30 hrs">13:30 hrs</option>
+                            <option value="14:00 hrs">14:00 hrs</option>
+                            <option value="14:30 hrs">14:30 hrs</option>
+                            <option value="15:00 hrs">15:00 hrs</option>
+                            <option value="15:30 hrs">15:30 hrs</option>
+                <div class="bg-white rounded-2xl border border-gold-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 flex items-center justify-between font-bold text-sm text-noir focus:outline-none">
+                        <span>¿Puedo elegir con qué profesional atenderme?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-600 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-xs text-gray-600 font-light leading-relaxed border-t border-gold-100 pt-3">
+                        ¡Sí! Tanto en el carrito de compras como en el módulo de reserva rápida puedes elegir a tu especialista favorita (Nicol, Katty, Camila o Aline) o bien seleccionar "Sin preferencia" para que te atienda la primera profesional disponible.
+                    </div>
+                </div>
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-heading text-xs font-bold text-gold-300 uppercase tracking-widest">Navegación</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#inicio" class="hover:text-gold-300 transition">Inicio</a></li>
+                        <li><a href="#conocenos" class="hover:text-gold-300 transition">Nosotras</a></li>
+                        <li><a href="#catalogo" class="hover:text-gold-300 transition">Catálogo & Precios</a></li>
+                        <li><a href="#estetica-corporal" class="hover:text-gold-300 transition">Estética Corporal</a></li>
+                        <li><a href="#giftcards" class="hover:text-gold-300 transition">Gift Cards</a></li>
+                        <li><a href="#convenios" class="hover:text-gold-300 transition">Convenios para Empresas</a></li>
+                        <li><a href="#trabaja-con-nosotras" class="hover:text-gold-300 transition">Trabaja con Nosotras</a></li>
+                        <li><a href="#testimonios" class="hover:text-gold-300 transition">Opiniones</a></li>
+                        <li><a href="#faq" class="hover:text-gold-300 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <button type="submit" class="w-full gold-gradient-bg text-white py-3.5 rounded-xl font-bold uppercase text-xs tracking-widest shadow-lg flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>CONFIRMAR POR WHATSAPP</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CUSTOM INFORMATION MODAL -->
+    <div id="info-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center space-y-4 border border-gold-300 shadow-2xl">
+            <i class="fa-solid fa-circle-info text-3xl text-gold-500"></i>
+            <h4 id="info-modal-title" class="font-heading font-bold text-base text-noir"></h4>
+            <p id="info-modal-message" class="text-xs text-gray-600 font-light leading-relaxed"></p>
+            <button onclick="closeInfoModal()" class="w-full gold-gradient-bg text-white py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider">Entendido</button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-notification" class="fixed top-24 right-5 z-50 transform translate-x-72 opacity-0 bg-noir text-white border border-gold-400 px-4 py-3 rounded-2xl shadow-2xl flex items-center space-x-3 transition-all duration-300">
+        <div class="w-7 h-7 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-400 text-xs shrink-0">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="text-xs">
+            <p id="toast-title" class="font-bold text-gold-300">¡Servicio Añadido!</p>
+            <p id="toast-message" class="text-gray-300 font-light text-[11px]">Agregado a tu carrito de reserva.</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Staff de Profesionales
+        const STAFF_PROFESIONALES = [
+            { name: 'Nicol Inostroza', specialty: 'Especialista Cosmetología' },
+            { name: 'Katty Rodríguez', specialty: 'Especialista Corporal' },
+            { name: 'Camila Rodríguez', specialty: 'Lash Designer & Master' },
+            { name: 'Aline Pereira', specialty: 'Maquillista, Peinados & Esmaltado' }
+        ];
+
+        const OFFICIAL_CATALOG = [
+            // 💇‍♀️ SERVICIOS CAPILARES
+            { id: 'cap-1', name: 'Secado y Planchado', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/SECADO%20Y%20PLANCHADO.jpg', basePrice: 15000, duration: 45, description: 'Lavado y planchado de cabello.', hasVariants: true, variants: [{ name: 'Cabello corto', price: 15000 }, { name: 'Cabello largo', price: 20000 }, { name: 'Cabello extra largo', price: 25000 }] },
+            { id: 'cap-2', name: 'Lavado de Cabello', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/lavado.jpg', basePrice: 10000, duration: 30, description: 'Lavado profesional con champú específico.', hasVariants: true, variants: [{ name: 'Lavado estándar', price: 10000 }, { name: 'Lavado intensivo', price: 20000 }] },
+            { id: 'cap-3', name: 'Masaje capilar', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/masaje%20capilar.jpg', basePrice: 20000, duration: 45, description: 'Revitaliza tu hebra capilar.', hasVariants: false },
+            { id: 'cap-4', name: 'Corte de Cabello', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/corte.jpg', basePrice: 7000, duration: 30, description: 'Corte de puntas o estilo personalizado.', hasVariants: false },
+            { id: 'cap-5', name: 'Cubrimiento de canas', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/cubrimiento%20de%20canas.jpg', basePrice: 20000, duration: 60, description: 'Disimula las canas (solo crecimiento).', hasVariants: false },
+            { id: 'cap-6', name: 'Tinturación de Cabello', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/tinturaci%C3%B3n%20de%20cabello.jpg', basePrice: 25000, duration: 90, description: 'Tintura completa (incluye lavado).', hasVariants: true, variants: [{ name: 'Cabello corto', price: 25000 }, { name: 'Cabello largo', price: 30000 }] },
+            { id: 'cap-7', name: 'Visos', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/images%20(13).jpg', basePrice: 39999, duration: 120, description: 'Aclara mechones finos uniformemente.', hasVariants: false },
+            { id: 'cap-8', name: 'Balayage sin decoloración', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Balagaye%20sin%20decoloracion.jpg', basePrice: 39999, duration: 150, description: 'Tinturación sin decoloración.', hasVariants: true, variants: [{ name: 'Cabello corto', price: 39999 }, { name: 'Cabello largo', price: 49999 }] },
+            { id: 'cap-9', name: 'Balayage con decoloración', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/balayage%20con%20decoloracion.jpg', basePrice: 50000, duration: 180, description: 'Tinturación con decoloración.', hasVariants: true, variants: [{ name: 'Cabello corto', price: 50000 }, { name: 'Cabello largo', price: 70000 }] },
+            { id: 'cap-10', name: 'Botox Capilar', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/botox%20capilar.jpg', basePrice: 30000, duration: 60, description: 'Hidratación y restauración intensiva.', hasVariants: false },
+            { id: 'cap-11', name: 'Alisado Fotónico', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/alisado%20fotonico.jpg', basePrice: 35000, duration: 120, description: 'Brillo espejo, sin formol ni frizz.', hasVariants: true, variants: [{ name: 'Cabello corto', price: 35000 }, { name: 'Cabello largo', price: 60000 }] },
+            { id: 'cap-12', name: 'Hidratación SALERM 21', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/hidratacion%20de%20cabello.jpg', basePrice: 35000, duration: 45, description: 'Repara cabello deshidratado o poroso.', hasVariants: false },
+            { id: 'cap-13', name: 'Peinado + Maquillaje', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/DUO%20PEINADO%20MAQUILLAJE.jpg', basePrice: 60000, duration: 45, description: 'Promoción Maquillaje + Peinado básico.', hasVariants: false },
+            { id: 'cap-14', name: 'Maquillaje Profesional', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/maquillaje%20profesional.jpg', basePrice: 35000, duration: 45, description: 'Maquillaje Profesional para eventos.', hasVariants: true, variants: [{ name: 'Maquillaje Social', price: 35000 }, { name: 'Maquillaje de Gala', price: 45000 }] },
+            { id: 'cap-15', name: 'PACK NOVIAS', category: '💇‍♀️ SERVICIOS CAPILARES', tag: 'capilar', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/PACK%20NOVIAS.jpg', basePrice: 100000, duration: 140, description: 'MAQUILLAJE NOVIA + PEINADO + ESMALTADO PERMANENTE SIMPLE + PRUEBAS.', hasVariants: false },
+
+            // 🌸 DEPILACIÓN FACIAL
+            { id: 'dep-f1', name: 'Depilación Rostro Completo + Perfilado', category: '🌸 DEPILACIÓN FACIAL', tag: 'depilacion-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/depilacion%20de%20rostro%20con%20cera.jpg', basePrice: 20000, duration: 30, description: 'Cera italiana y cejas.', hasVariants: false },
+            { id: 'dep-f2', name: 'Perfilado de Cejas + Bozo', category: '🌸 DEPILACIÓN FACIAL', tag: 'depilacion-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/depilacion%20de%20bozo%20y%20perfilado%20de%20cejas.jpg', basePrice: 12990, duration: 25, description: 'Diseño de mirada y bozo.', hasVariants: false },
+            { id: 'dep-f3', name: 'Depilación de Patillas', category: '🌸 DEPILACIÓN FACIAL', tag: 'depilacion-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Depilaci%C3%B3n%20de%20Patillas.jpg', basePrice: 7000, duration: 15, description: 'Retiro delicado.', hasVariants: false },
+            { id: 'dep-f4', name: 'Depilación de Bozo', category: '🌸 DEPILACIÓN FACIAL', tag: 'depilacion-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/depilacion%20de%20bozo%20con%20cera%20miel11.jpg', basePrice: 3500, duration: 10, description: 'Retiro rápido.', hasVariants: false },
+            { id: 'dep-f5', name: 'Depilación de Pómulo', category: '🌸 DEPILACIÓN FACIAL', tag: 'depilacion-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Depilaci%C3%B3n%20de%20Frente%20o%20P%C3%B3mulos.jpg', basePrice: 3000, duration: 10, description: 'Pómulos suave y veloz.', hasVariants: false },
+            { id: 'dep-f6', name: 'Depilación de Frente', category: '🌸 DEPILACIÓN FACIAL', tag: 'depilacion-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/depilacion%20de%20frente.jpg', basePrice: 12990, duration: 15, description: 'Depilación de frente con cera.', hasVariants: false },
+
+            // 👁️ PESTAÑAS
+            { id: 'pes-1', name: 'Lifting de Pestañas', category: '👁️ PESTAÑAS', tag: 'pestanas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/lifting%20de%20pesta%C3%B1as1.jpg', basePrice: 20000, duration: 45, description: 'Curvatura natural.', hasVariants: false },
+            { id: 'pes-2', name: 'Lifting + Botox + Tinte', category: '👁️ PESTAÑAS', tag: 'pestanas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/pesta%C3%B1as%20mas%20tinte%20botox.jpg', basePrice: 25000, duration: 60, description: 'Nutrición con bótox y tinte.', hasVariants: false },
+            { id: 'pes-3', name: 'Extensión Clásicas', category: '👁️ PESTAÑAS', tag: 'pestanas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/clasicas.jpg', basePrice: 30000, duration: 90, description: 'Pelo a pelo natural.', hasVariants: false },
+            { id: 'pes-4', name: 'Extensión Rímel', category: '👁️ PESTAÑAS', tag: 'pestanas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Extensiones%20Efecto%20R%C3%ADmel.jpg', basePrice: 35000, duration: 90, description: 'Mayor volumen sutil.', hasVariants: false },
+            { id: 'pes-5', name: 'Closed Fans', category: '👁️ PESTAÑAS', tag: 'pestanas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Closed%20Fans.jpg', basePrice: 40000, duration: 100, description: 'Curvatura fija.', hasVariants: false },
+            { id: 'pes-6', name: 'Volumen', category: '👁️ PESTAÑAS', tag: 'pestanas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/volumen.jpg', basePrice: 45000, duration: 120, description: 'Ideal para pestañas delgadas.', hasVariants: false },
+            { id: 'pes-7', name: 'Mega Volumen', category: '👁️ PESTAÑAS', tag: 'pestanas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Volumen%20RusoMega%20Volumen.jpg', basePrice: 50000, duration: 120, description: 'Densa y dramática.', hasVariants: false },
+
+            // 👑 CEJAS PERFECTAS
+            { id: 'cej-1', name: 'Microblading de Cejas', category: '👑 CEJAS PERFECTAS', tag: 'cejas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Microblading%20de%20Cejas.jpg', basePrice: 100000, duration: 120, description: 'Pigmentación pelo a pelo.', hasVariants: true, variants: [{ name: 'Nuevo', price: 100000 }, { name: 'Retoque', price: 50000 }] },
+            { id: 'cej-2', name: 'Perfilado + Visajismo + Tinte', category: '👑 CEJAS PERFECTAS', tag: 'cejas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Perfilado%20%2B%20Visajismo%20%2B%20Tinte.jpg', basePrice: 15000, duration: 35, description: 'Diseño adaptado a facciones.', hasVariants: false },
+            { id: 'cej-3', name: 'Perfilado + Visajismo', category: '👑 CEJAS PERFECTAS', tag: 'cejas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Tinte%20de%20Cejas.jpg', basePrice: 10000, duration: 25, description: 'Anchura y grosor.', hasVariants: false },
+            { id: 'cej-4', name: 'Laminado de Cejas', category: '👑 CEJAS PERFECTAS', tag: 'cejas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Laminado%20de%20Cejas.jpg', basePrice: 15000, duration: 45, description: 'Alisa y peina.', hasVariants: false },
+
+            // 💅 UÑAS
+            { id: 'una-1', name: 'Esmaltado Permanente', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Esmaltado%20Permanente%20(Un%20solo%20tono).jpg', basePrice: 11999, duration: 45, description: 'Brillo efecto espejo.', hasVariants: false },
+            { id: 'una-2', name: 'Base Rubber + Diseño', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Base%20Rubber%20%2B%20Esmaltado%20%2B%20Dise%C3%B1o.jpg', basePrice: 20000, duration: 60, description: 'Esmaltado premium + diseño.', hasVariants: false },
+            { id: 'una-3', name: 'Esmaltado Permanente + Diseño', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/smaltado%20Permanente%20%2B%20Dise%C3%B1o.jpg', basePrice: 20000, duration: 60, description: 'Color sobre largo natural.', hasVariants: false },
+            { id: 'una-4', name: 'Baño Acrílico', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/ba%C3%B1o%20acrilico.jpg', basePrice: 20000, duration: 60, description: 'Acabado clásico.', hasVariants: false },
+            { id: 'una-5', name: 'Baño Acrílico + Diseño', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Ba%C3%B1o%20de%20Acr%C3%ADlico%20%2B%20Dise%C3%B1o.jpg', basePrice: 25000, duration: 75, description: 'Capa protectora + diseño.', hasVariants: false },
+            { id: 'una-6', name: 'Uñas Soft Gel', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/softgel.jpg', basePrice: 19990, duration: 60, description: 'Tips de gel flexible.', hasVariants: false },
+            { id: 'una-7', name: 'Uñas Soft Gel + Diseño', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/U%C3%B1as%20Soft%20Gel%20%2B%20Dise%C3%B1o.jpg', basePrice: 28000, duration: 80, description: 'Soft gel con diseño.', hasVariants: false },
+            { id: 'una-8', name: 'Acrílicas + Tip', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Acrilicas%20%2B%20Tip.jpg', basePrice: 25000, duration: 90, description: 'Extensión con tips.', hasVariants: false },
+            { id: 'una-9', name: 'Acrílicas + Tip + Diseño', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Acrilicas%20%2B%20Tip%20%2B%20dise%C3%B1o.jpg', basePrice: 28000, duration: 105, description: 'Acrílicas con diseño.', hasVariants: false },
+            { id: 'una-10', name: 'Acrílicas Esculpidas', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Acrilicas%20Esculpidas%20sobre%20Tip.jpg', basePrice: 30000, duration: 110, description: 'Esculpidas impecables.', hasVariants: false },
+            { id: 'una-11', name: 'Acrílicas Esculpidas + Diseño', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Acrilicas%20%2B%20Tip%20%2B%20dise%C3%B1o.jpg', basePrice: 35000, duration: 120, description: 'Set completo con diseño.', hasVariants: false },
+            { id: 'una-12', name: 'Uñas PoliGel + Diseño', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/PoliGel%20%2B%20Dise%C3%B1o.jpg', basePrice: 25000, duration: 90, description: 'Ultra ligeras y flexibles.', hasVariants: false },
+            { id: 'una-13', name: 'Retiro de Otro Salón', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/quita-tus-u%C3%B1as-con-acetona_opt-940x580.jpg', basePrice: 10000, duration: 30, description: 'Retiro cuidadoso.', hasVariants: false },
+            { id: 'una-14', name: 'Retiro de Nuestro Salón', category: '💅 UÑAS', tag: 'unas', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/images%20(10).jpg', basePrice: 5990, duration: 20, description: 'Retiro DIVAS ELEY.', hasVariants: false },
+
+            // 🦵 DEPILACIÓN CORPORAL
+            { id: 'dep-c1', name: 'Depilación Cuerpo Completo', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://footandbody.es/wp-content/uploads/2021/01/Ventajas-de-la-depilaci%C3%B3n-con-cera.jpg', basePrice: 50000, duration: 60, description: 'Cera italiana integral.', hasVariants: false },
+            { id: 'dep-c2', name: 'Depilación Media Pierna', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Depilaci%C3%B3n%20Corporal%20Media%20Pierna.jpg', basePrice: 13000, duration: 25, description: 'Media pierna.', hasVariants: false },
+            { id: 'dep-c3', name: 'Depilación Bikini', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Depilaci%C3%B3n%20Bikini.jpg', basePrice: 15000, duration: 25, description: 'Zona bikini.', hasVariants: false },
+            { id: 'dep-c4', name: 'Depilación Rebaje Completo', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/REBAJE%20COMPLETO.jpg', basePrice: 25000, duration: 35, description: 'Zona íntima completa.', hasVariants: false },
+            { id: 'dep-c5', name: 'Depilación Axilas', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/depilacion%20de%20axilas.jpg', basePrice: 10000, duration: 15, description: 'Axilas.', hasVariants: false },
+            { id: 'dep-c6', name: 'Depilación Glúteos', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Depilaci%C3%B3n%20en%20gluteos.jpg', basePrice: 10000, duration: 20, description: 'Glúteos.', hasVariants: false },
+            { id: 'dep-c7', name: 'Depilación Piernas Completas', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/piernas%20completas.jpg', basePrice: 25000, duration: 40, description: 'Ambas piernas.', hasVariants: false },
+            { id: 'dep-c8', name: 'Depilación Medio Brazo', category: '🦵 DEPILACIÓN CORPORAL', tag: 'depilacion-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/de%20medio%20brazo.jpg', basePrice: 10000, duration: 20, description: 'Medio brazo.', hasVariants: false },
+
+            // 🧖‍♀️ CUIDADO FACIAL
+            { id: 'fac-1', name: 'Limpieza Facial Profunda Premium', category: '🧖‍♀️ CUIDADO FACIAL', tag: 'cuidado-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/limpieza%20facial%C2%A0.jpg', basePrice: 35000, duration: 60, description: 'Punta diamante, vapor, máscara LED.', hasVariants: false },
+            { id: 'fac-2', name: 'Peeling de Algas Marinas', category: '🧖‍♀️ CUIDADO FACIAL', tag: 'cuidado-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Peeling%20de%20Algas%20Marinas.jpg', basePrice: 50000, duration: 60, description: 'Renueva piel y reduce poros.', hasVariants: false },
+            { id: 'fac-3', name: 'DERMAPEN Rejuvenecimiento Facial', category: '🧖‍♀️ CUIDADO FACIAL', tag: 'cuidado-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Rejuvenecimiento%20Facial%20con%20DERMAPHEN.jpg', basePrice: 50000, duration: 60, description: 'Estimula producción natural de colágeno.', hasVariants: false },
+            { id: 'fac-4', name: 'BB Glow', category: '🧖‍♀️ CUIDADO FACIAL', tag: 'cuidado-facial', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/BBGLOW.jpg', basePrice: 30000, duration: 50, description: 'Efecto piel porcelana y maquillaje progresivo.', hasVariants: false },
+
+            // 🔥 PLANES Y TRATAMIENTOS REDUCTIVOS
+            { id: 'red-1', name: 'Plan Reductivo Básico', category: '🔥 PLANES Y TRATAMIENTOS REDUCTIVOS', tag: 'estetica-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Plan%20Full%20Reductivo.jpg', basePrice: 99000, duration: 60, description: '5 sesiones. Previa evaluación.', hasVariants: false },
+            { id: 'red-2', name: 'Plan Full Reductivo', category: '🔥 PLANES Y TRATAMIENTOS REDUCTIVOS', tag: 'estetica-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/Plan%20Full%20Reductivo.jpg', basePrice: 150000, duration: 60, description: '10 sesiones (1 zona). Previa evaluación.', hasVariants: false },
+            { id: 'red-3', name: 'Plan Full Body Reductivo', category: '🔥 PLANES Y TRATAMIENTOS REDUCTIVOS', tag: 'estetica-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/FULL%20%20BODY%20REDUCTIVO.jpg', basePrice: 350000, duration: 90, description: '10 sesiones full body. Previa evaluación.', hasVariants: false },
+            { id: 'red-4', name: 'Promo Lipolaser + Maderoterapia', category: '🔥 PLANES Y TRATAMIENTOS REDUCTIVOS', tag: 'estetica-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/FULL%20%20BODY%20REDUCTIVO.jpg', basePrice: 800000, duration: 90, description: 'Incluye 6 sesiones. Previa evaluación (Precio normal $160.000)', hasVariants: false },
+            { id: 'red-5', name: 'Masaje Brasileño Drenaje', category: '🔥 PLANES Y TRATAMIENTOS REDUCTIVOS', tag: 'estetica-corporal', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/masaje%20brasile%C3%B1o.jpg', basePrice: 29000, duration: 50, description: 'Drenaje linfático y moldeador.', hasVariants: true, variants: [{ name: '1 Sesión', price: 29000 }, { name: '2 Sesiones', price: 50000 }] },
+
+            // 💆‍♀️ MASAJES RELAJANTES
+            { id: 'mas-1', name: 'Masaje Relajante', category: '💆‍♀️ MASAJES RELAJANTES', tag: 'masajes', image: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80', basePrice: 25000, duration: 45, description: 'Alivia tensiones.', hasVariants: false },
+            { id: 'mas-2', name: 'Masaje Cuerpo Completo + Aromaterapia', category: '💆‍♀️ MASAJES RELAJANTES', tag: 'masajes', image: 'https://6a891d2297833836f65581a1.imgix.net/sandbox/MASAJE%20RELAJANTE%20AROMATERAPIA.jpg', basePrice: 50000, duration: 60, description: 'Aceites esenciales y aromaterapia.', hasVariants: false }
+        ];
+
+        let cart = [];
+        let activeCategory = 'Todos';
+        let searchQuery = '';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCategoryPills();
+            renderCatalogGrid();
+            setupSearch();
+            updateCartUI();
+        });
+
+        function scrollCategories(amount) {
+            document.getElementById('category-pills')?.scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
+        function renderCategoryPills() {
+            const categories = [
+                'Todos', 
+                '💇‍♀️ SERVICIOS CAPILARES', 
+                '🌸 DEPILACIÓN FACIAL', 
+                '👁️ PESTAÑAS', 
+                '👑 CEJAS PERFECTAS', 
+                '💅 UÑAS', 
+                '🦵 DEPILACIÓN CORPORAL', 
+                '🧖‍♀️ CUIDADO FACIAL', 
+                '🔥 PLANES Y TRATAMIENTOS REDUCTIVOS', 
+                '💆‍♀️ MASAJES RELAJANTES'
+            ];
+            
+            const container = document.getElementById('category-pills');
+            if (!container) return;
+
+            container.innerHTML = categories.map(cat => `
+                <button onclick="filterCategory('${cat}')" class="px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-200 border cursor-pointer shrink-0 ${
+                    cat === activeCategory 
+                        ? 'bg-noir text-gold-400 border-gold-400 shadow-lg scale-105' 
+                        : 'bg-white text-gray-700 border-gold-200 hover:border-gold-400 shadow-sm'
+                }">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function setupSearch() {
+            document.getElementById('catalog-search')?.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                renderCatalogGrid();
+            });
+        }
+
+        function filterCategory(cat) {
+            activeCategory = cat;
+            renderCategoryPills();
+            renderCatalogGrid();
+        }
+
+        function resetCatalogFilter() {
+            activeCategory = 'Todos';
+            searchQuery = '';
+            const searchInput = document.getElementById('catalog-search');
+            if (searchInput) searchInput.value = '';
+            renderCategoryPills();
+            renderCatalogGrid();
+        }
+
+        function scrollToCatalog() {
+            document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderCatalogGrid() {
+            const grid = document.getElementById('services-grid');
+            const emptyState = document.getElementById('no-services-found');
+
+            const filtered = OFFICIAL_CATALOG.filter(s => {
+                const matchesCat = activeCategory === 'Todos' || s.category === activeCategory;
+                const matchesSearch = s.name.toLowerCase().includes(searchQuery) || s.description.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(item => `
+                <div class="bg-white rounded-3xl border border-gold-200 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group overflow-hidden">
+                    <div class="relative h-48 w-full overflow-hidden bg-cream-100">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FAF8F5/D4AF37?text=DIVAS+ELEY';">
+                        <div class="absolute top-3 left-3 bg-white/95 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-gold-800 border shadow-sm">
+                            ${item.category}
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-heading font-bold text-base text-noir">${item.name}</h3>
+                            <p class="text-xs text-gray-600 font-light mt-2 leading-relaxed">${item.description}</p>
+                        </div>
+
+                        ${item.hasVariants ? `
+                            <div class="pt-2">
+                                <select id="select-variant-${item.id}" onchange="onCardVariantChange('${item.id}')" class="w-full text-xs px-3 py-2 rounded-xl border border-gold-300 bg-white font-medium text-gray-800 outline-none">
+                                    ${item.variants.map((v, vIdx) => `<option value="${vIdx}">${v.name} - $${v.price.toLocaleString('es-CL')} CLP</option>`).join('')}
+                                </select>
+                            </div>
+                        ` : ''}
+
+                        <div class="pt-4 border-t border-gray-100 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-gray-400 uppercase">Precio</span>
+                                <span id="card-price-${item.id}" class="font-heading text-lg font-bold text-noir">$${item.basePrice.toLocaleString('es-CL')} CLP</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-12 gap-2">
+                                <button onclick="handleAddToCartClick('${item.id}')" class="col-span-2 bg-noir text-gold-400 hover:bg-gold-500 hover:text-white p-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center shadow" title="Añadir al Carrito">
+                                    <i class="fa-solid fa-cart-plus text-sm"></i>
+                                </button>
+                                <button onclick="openBookingModalForService('${item.id}')" class="col-span-5 gold-gradient-bg text-white py-2.5 px-3 rounded-xl font-bold text-xs uppercase shadow flex items-center justify-center space-x-1">
+                                    <i class="fa-regular fa-calendar-check text-xs"></i>
+                                    <span>Reservar</span>
+                                </button>
+                                <button onclick="consultServiceOnWhatsApp('${item.id}')" class="col-span-5 bg-cream-100 hover:bg-green-50 border border-green-500 text-green-700 py-2.5 px-3 rounded-xl font-bold text-xs uppercase flex items-center justify-center space-x-1">
+                                    <i class="fa-brands fa-whatsapp text-sm text-green-600"></i>
+                                    <span>Consultar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function onCardVariantChange(serviceId) {
+            const variantSelect = document.getElementById(`select-variant-${serviceId}`);
+            const priceElem = document.getElementById(`card-price-${serviceId}`);
+            const service = OFFICIAL_CATALOG.find(s => s.id === serviceId);
+
+            if (service && service.hasVariants && variantSelect && priceElem) {
+                const idx = parseInt(variantSelect.value) || 0;
+                if (service.variants[idx]) {
+                    priceElem.textContent = `$${service.variants[idx].price.toLocaleString('es-CL')} CLP`;
+                }
+            }
+        }
+
+        function handleAddToCartClick(serviceId) {
+            const variantSelect = document.getElementById(`select-variant-${serviceId}`);
+            let variantIdx = variantSelect ? (parseInt(variantSelect.value) || 0) : 0;
+            addToCart(serviceId, variantIdx);
+        }
+
+        function addToCart(serviceId, variantIndex = 0) {
+            const service = OFFICIAL_CATALOG.find(s => s.id === serviceId);
+            if (!service) return;
+
+            let price = service.basePrice;
+            let variantName = '';
+
+            if (service.hasVariants && service.variants && service.variants[variantIndex]) {
+                price = service.variants[variantIndex].price;
+                variantName = service.variants[variantIndex].name;
+            }
+
+            const existing = cart.find(item => item.id === serviceId && item.variantName === variantName);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({
+                    id: service.id,
+                    name: service.name,
+                    category: service.category,
+                    price: price,
+                    variantName: variantName,
+                    quantity: 1,
+                    hasVariants: service.hasVariants,
+                    variants: service.variants || []
+                });
+            }
+
+            updateCartUI();
+            showToast('¡Añadido al Carrito!', `${service.name} ${variantName ? '(' + variantName + ')' : ''}`);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartQuantity(index, delta) {
+            cart[index].quantity += delta;
+            if (cart[index].quantity <= 0) cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCartUI();
+        }
+
+        function calculateCartTotals() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            return { total };
+        }
+
+        function updateCartUI() {
+            const { total } = calculateCartTotals();
+            const totalCount = cart.reduce((c, i) => c + i.quantity, 0);
+
+            document.getElementById('cart-badge-header').textContent = totalCount;
+            document.getElementById('cart-badge-mobile-header').textContent = totalCount;
+            document.getElementById('cart-badge-mobile-menu').textContent = totalCount;
+            document.getElementById('cart-badge-sticky').textContent = totalCount;
+            document.getElementById('sticky-cart-total').textContent = `$${total.toLocaleString('es-CL')} CLP`;
+
+            document.getElementById('cart-summary-total').textContent = `$${total.toLocaleString('es-CL')} CLP`;
+
+            const container = document.getElementById('cart-items-container');
+            if (!container) return;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-8 space-y-2 border border-dashed rounded-2xl bg-cream-50">
+                        <i class="fa-solid fa-basket-shopping text-2xl text-gold-400"></i>
+                        <p class="text-xs font-semibold text-gray-700">Tu carrito de reservas está vacío</p>
+                    </div>`;
+                return;
+            }
+
+            container.innerHTML = cart.map((item, idx) => `
+                <div class="bg-cream-50 p-3 rounded-2xl border border-gold-200 space-y-2 relative">
+                    <div class="flex items-start justify-between pr-5">
+                        <div>
+                            <h5 class="text-xs font-bold text-noir">${item.name} ${item.variantName ? '('+item.variantName+')' : ''}</h5>
+                            <span class="text-[10px] text-gray-500">${item.category}</span>
+                        </div>
+                        <button onclick="removeFromCart(${idx})" class="text-gray-400 hover:text-red-500 absolute top-2 right-2"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                    <div class="flex items-center justify-between pt-1 border-t text-xs">
+                        <div class="flex items-center space-x-2 bg-white rounded-lg border px-2 py-0.5">
+                            <button onclick="updateCartQuantity(${idx}, -1)" class="text-gold-700 font-bold px-1">-</button>
+                            <span class="font-bold text-[11px]">${item.quantity}</span>
+                            <button onclick="updateCartQuantity(${idx}, 1)" class="text-gold-700 font-bold px-1">+</button>
+                        </div>
+                        <span class="font-bold text-noir">$${(item.price * item.quantity).toLocaleString('es-CL')} CLP</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openCartDrawer() {
+            document.getElementById('cart-drawer-backdrop').classList.remove('hidden');
+        }
+        function closeCartDrawer() {
+            document.getElementById('cart-drawer-backdrop').classList.add('hidden');
+        }
+
+        function checkCartDate() {
+            const dateInput = document.getElementById('cart-fecha');
+            if (!dateInput || !dateInput.value) return;
+            const selectedDate = new Date(dateInput.value + 'T00:00:00');
+            if (selectedDate.getDay() === 0) {
+                showCustomModal('Atención', 'Los días domingos no trabajamos. Por favor selecciona un día de lunes a sábado.');
+                dateInput.value = '';
+            }
+        }
+
+        function checkModalDate() {
+            const dateInput = document.getElementById('modal-fecha');
+            if (!dateInput || !dateInput.value) return;
+            const selectedDate = new Date(dateInput.value + 'T00:00:00');
+            if (selectedDate.getDay() === 0) {
+                showCustomModal('Atención', 'Los días domingos no trabajamos. Por favor selecciona un día de lunes a sábado.');
+                dateInput.value = '';
+            }
+        }
+
+        function sendCartBookingToWhatsApp() {
+            if (cart.length === 0) {
+                showCustomModal('Carrito Vacío', 'Por favor, añade al menos un servicio del catálogo a tu carrito antes de enviar la reserva.');
+                return;
+            }
+
+            const profesional = document.getElementById('cart-profesional').value;
+            const nombre = document.getElementById('cart-nombre').value.trim();
+            const apellido = document.getElementById('cart-apellido').value.trim();
+            const celular = document.getElementById('cart-celular').value.trim();
+            const correo = document.getElementById('cart-correo').value.trim();
+            const fecha = document.getElementById('cart-fecha').value;
+            const hora = document.getElementById('cart-hora').value;
+
+            if (!nombre || !apellido || !celular || !fecha || !hora) {
+                showCustomModal('Datos Incompletos', 'Por favor, completa tu Nombre, Apellido, WhatsApp, Fecha y Hora.');
+                return;
+            }
+
+            const { total } = calculateCartTotals();
+            let itemsText = cart.map((item, i) => `${i + 1}. *${item.name} ${item.variantName ? '('+item.variantName+')' : ''}* x${item.quantity} → $${(item.price * item.quantity).toLocaleString('es-CL')} CLP`).join('\n');
+
+            const waText = `Hola DIVAS ELEY ✨\nQuiero solicitar mi reserva con el siguiente carrito:\n\n👤 *Cliente:* ${nombre} ${apellido}\n📱 *WhatsApp:* ${celular}\n📅 *Fecha:* ${fecha} a las ${hora}\n👩‍⚕️ *Profesional:* ${profesional}\n\n📋 *Servicios:* \n${itemsText}\n\n💰 *Total Estimado: $${total.toLocaleString('es-CL')} CLP*\n\nQuedo atenta/o a la confirmación de disponibilidad. ¡Gracias!`;
+            window.open(`https://wa.me/56937875118?text=${encodeURIComponent(waText)}`, '_blank');
+        }
+
+        function consultServiceOnWhatsApp(serviceId) {
+            const service = OFFICIAL_CATALOG.find(s => s.id === serviceId);
+            if (!service) return;
+            const waText = `Hola DIVAS ELEY ✨\nQuisiera consultar más información sobre el servicio: *${service.name}* ($${service.basePrice.toLocaleString('es-CL')} CLP).\n¿Tienen disponibilidad? ¡Gracias!`;
+            window.open(`https://wa.me/56937875118?text=${encodeURIComponent(waText)}`, '_blank');
+        }
+
+        function openBookingModal() {
+            document.getElementById('booking-modal').classList.remove('hidden');
+            updateModalPriceDisplay();
+        }
+
+        function openBookingModalWithProfessional(professionalName) {
+            openBookingModal();
+            const profSelect = document.getElementById('modal-profesional');
+            if (profSelect) profSelect.value = professionalName;
+        }
+
+        function openBookingModalForService(serviceId) {
+            const service = OFFICIAL_CATALOG.find(s => s.id === serviceId);
+            if (service) {
+                openBookingModal();
+                document.getElementById('modal-categoria').value = service.category;
+                onModalCategoryChange();
+                document.getElementById('modal-servicio').value = serviceId;
+                onModalServiceChange();
+            }
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+        }
+
+        function onModalCategoryChange() {
+            const cat = document.getElementById('modal-categoria').value;
+            const servSelect = document.getElementById('modal-servicio');
+            document.getElementById('modal-variant-container').classList.add('hidden');
+
+            if (!cat) {
+                servSelect.innerHTML = '<option value="">-- Primero selecciona una categoría --</option>';
+                updateModalPriceDisplay();
+                return;
+            }
+
+            const filtered = OFFICIAL_CATALOG.filter(s => s.category === cat);
+            servSelect.innerHTML = `<option value="">-- Selecciona un servicio --</option>` + filtered.map(s => `<option value="${s.id}">${s.name} ($${s.basePrice.toLocaleString('es-CL')} CLP)</option>`).join('');
+            updateModalPriceDisplay();
+        }
+
+        function onModalServiceChange() {
+            const sId = document.getElementById('modal-servicio').value;
+            const service = OFFICIAL_CATALOG.find(s => s.id === sId);
+            const varContainer = document.getElementById('modal-variant-container');
+            const varSelect = document.getElementById('modal-variante');
+
+            if (service && service.hasVariants && service.variants) {
+                varContainer.classList.remove('hidden');
+                varSelect.innerHTML = service.variants.map((v, i) => `<option value="${i}">${v.name} - $${v.price.toLocaleString('es-CL')} CLP</option>`).join('');
+            } else {
+                varContainer.classList.add('hidden');
+            }
+            updateModalPriceDisplay();
+        }
+
+        function updateModalPriceDisplay() {
+            const sId = document.getElementById('modal-servicio').value;
+            const service = OFFICIAL_CATALOG.find(s => s.id === sId);
+            const display = document.getElementById('modal-price-display');
+            const varContainer = document.getElementById('modal-variant-container');
+            const varSelect = document.getElementById('modal-variante');
+
+            if (!service) {
+                display.textContent = '$0 CLP';
+                return;
+            }
+
+            let price = service.basePrice;
+            if (service.hasVariants && !varContainer.classList.contains('hidden') && varSelect.value !== '') {
+                const idx = parseInt(varSelect.value) || 0;
+                if (service.variants[idx]) price = service.variants[idx].price;
+            }
+
+            display.textContent = `$${price.toLocaleString('es-CL')} CLP`;
+        }
+
+        function handleSingleBookingSubmit(e) {
+            e.preventDefault();
+            const profesional = document.getElementById('modal-profesional').value;
+            const nombre = document.getElementById('modal-nombre').value.trim();
+            const apellido = document.getElementById('modal-apellido').value.trim();
+            const celular = document.getElementById('modal-celular').value.trim();
+            const correo = document.getElementById('modal-correo').value.trim();
+            const sId = document.getElementById('modal-servicio').value;
+            const fecha = document.getElementById('modal-fecha').value;
+            const hora = document.getElementById('modal-hora').value;
+
+            const service = OFFICIAL_CATALOG.find(s => s.id === sId);
+            let sName = service ? service.name : 'Servicio';
+            let price = service ? service.basePrice : 0;
+
+            const varContainer = document.getElementById('modal-variant-container');
+            const varSelect = document.getElementById('modal-variante');
+            if (service && service.hasVariants && !varContainer.classList.contains('hidden')) {
+                const idx = parseInt(varSelect.value) || 0;
+                if (service.variants[idx]) {
+                    sName += ` (${service.variants[idx].name})`;
+                    price = service.variants[idx].price;
+                }
+            }
+
+            const waText = `Hola DIVAS ELEY ✨\nQuiero solicitar una reserva:\n\n👤 *Cliente:* ${nombre} ${apellido}\n📱 *WhatsApp:* ${celular}\n📅 *Fecha:* ${fecha} a las ${hora}\n👩‍⚕️ *Profesional:* ${profesional}\n\n💆‍♀️ *Servicio:* ${sName}\n💰 *Valor Estimado:* $${price.toLocaleString('es-CL')} CLP\n\nQuedo atenta/o a la confirmación. ¡Gracias!`;
+            window.open(`https://wa.me/56937875118?text=${encodeURIComponent(waText)}`, '_blank');
+            closeBookingModal();
+        }
+
+        function onGiftCardCategoryChange() {
+            const tag = document.getElementById('gc-category').value;
+            const servSelect = document.getElementById('gc-service');
+            const varContainer = document.getElementById('gc-variant-container');
+            if (!tag) {
+                servSelect.innerHTML = '<option value="">-- Primero selecciona una categoría --</option>';
+                varContainer.classList.add('hidden');
+                return;
+            }
+            const filtered = OFFICIAL_CATALOG.filter(s => s.tag === tag);
+            servSelect.innerHTML = '<option value="">-- Selecciona un servicio --</option>' + filtered.map(s => `<option value="${s.id}">${s.name} - $${s.basePrice.toLocaleString('es-CL')} CLP</option>`).join('');
+            varContainer.classList.add('hidden');
+            updateGiftCardLivePreview();
+        }
+
+        function onGiftCardServiceChange() {
+            const sId = document.getElementById('gc-service').value;
+            const service = OFFICIAL_CATALOG.find(s => s.id === sId);
+            const varContainer = document.getElementById('gc-variant-container');
+            const varSelect = document.getElementById('gc-variant');
+            if (service && service.hasVariants && service.variants) {
+                varContainer.classList.remove('hidden');
+                varSelect.innerHTML = service.variants.map((v, i) => `<option value="${i}">${v.name} - $${v.price.toLocaleString('es-CL')} CLP</option>`).join('');
+            } else {
+                varContainer.classList.add('hidden');
+            }
+            updateGiftCardLivePreview();
+        }
+
+        function updateGiftCardLivePreview() {
+            const para = document.getElementById('gc-para').value.trim();
+            const de = document.getElementById('gc-de').value.trim();
+            const email = document.getElementById('gc-email').value.trim();
+            const msg = document.getElementById('gc-mensaje').value.trim();
+            const sId = document.getElementById('gc-service').value;
+            const service = OFFICIAL_CATALOG.find(s => s.id === sId);
+
+            document.getElementById('preview-gc-para').textContent = para || '[Destinatario]';
+            document.getElementById('preview-gc-de').textContent = de || '[Tú]';
+            document.getElementById('preview-gc-mensaje').textContent = msg ? `"${msg}"` : '"Disfruta este momento."';
+
+            if (service) {
+                document.getElementById('preview-gc-servicio').textContent = service.name;
+                document.getElementById('preview-gc-precio').textContent = `$${service.basePrice.toLocaleString('es-CL')} CLP`;
+            } else {
+                document.getElementById('preview-gc-servicio').textContent = 'Selecciona un servicio...';
+                document.getElementById('preview-gc-precio').textContent = '$0 CLP';
+            }
+        }
+
+        function handleGiftCardSubmit(e) {
+            e.preventDefault();
+            const para = document.getElementById('gc-para').value.trim();
+            const de = document.getElementById('gc-de').value.trim();
+            const email = document.getElementById('gc-email').value.trim();
+            const sId = document.getElementById('gc-service').value;
+            const service = OFFICIAL_CATALOG.find(s => s.id === sId);
+            if (!service) return;
+
+            const waText = `Hola DIVAS ELEY ✨\nQuiero solicitar una Gift Card Digital 🎁\n\nPARA: ${para}\nDE: ${de}\nSERVICIO: ${service.name} ($${service.basePrice.toLocaleString('es-CL')} CLP)\n\nQuedo atenta/o a los pasos para el pago.`;
+            window.open(`https://wa.me/56937875118?text=${encodeURIComponent(waText)}`, '_blank');
+        }
+
+        function showToast(title, message) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.remove('translate-x-72', 'opacity-0');
+            toast.classList.add('translate-x-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-x-0', 'opacity-100');
+                toast.classList.add('translate-x-72', 'opacity-0');
+            }, 3000);
+        }
+
+        function showCustomModal(title, msg) {
+            document.getElementById('info-modal-title').textContent = title;
+            document.getElementById('info-modal-message').textContent = msg;
+            document.getElementById('info-modal').classList.remove('hidden');
+        }
+        function closeInfoModal() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu')?.classList.toggle('hidden');
+        }
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', toggleMobileMenu);
+    </script>
+</body>
+</html>
